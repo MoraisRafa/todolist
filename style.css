@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --white: #fff;
+    --primary-color: #f6f4f4;
+    --light-gray: #ded6d6;
+    --secondary-color: #373f51;
+    --orange-soda: #e55934;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font: bold 2rem 'Roboto', sans-serif;
+
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo_title {
+    display: flex;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.todo_list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo_items {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    padding: 5px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+}
+
+.todo_items > div {
+    width: 80%;
+}
+
+.todo_items:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.todo_items > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo_items > input[type='image']:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    color: var(--orange-soda);
+}
+
+.todo_items > input[type='button'],
+.todo_items > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+    
+}
+
+.todo_items > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+}
+
+.todo_new {
+    display: flex;
+    background-color: #fff59d;
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin: 10px;
+    font: inherit;
+}
+
+.todo_new > input{
+    background-color: #fff59d;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+.todo_new > input[type='image'] {
+    display: flex;
+    width: 40px;
+    height: auto;
+    max-width: 7%;
+}
+
+.todo_new > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
+
